@@ -1,4 +1,5 @@
-# jQuery Events in the View
+![CF](https://i.imgur.com/7v5ASc8.png)  03-jQuery-and-events
+=======
 
 Work with the provided starter code to add event handling to a basic Blog web site.
 
