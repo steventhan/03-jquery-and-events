@@ -1,5 +1,6 @@
 ![CF](https://i.imgur.com/7v5ASc8.png)  03-jQuery-and-events
 =======
+[![Build Status](https://travis-ci.org/codefellows-seattle-301d4/03-jQuery-and-events.svg?branch=master)](https://travis-ci.org/codefellows-seattle-301d4/03-jQuery-and-events)
 
 Work with the provided starter code to add event handling to a basic Blog web site.
 
@@ -39,7 +40,7 @@ Here is a recommended workflow, if you haven't already set up a fork to work fro
 1. Now, you can sync changes from the upstream repo to your local master branch whenever you need them (do this at the beginning of each day):
   - `git pull upstream master`
   - `git checkout -b class-00` (for today, class-02)
- 
+
 ## Write code together
 
 Now find those `TODO` items in the code, and tackle one of them.
@@ -55,14 +56,14 @@ Now find those `TODO` items in the code, and tackle one of them.
 1. Type `git commit -m "Some meaningful message"` where Some meaningful message is a message that explains your commit.
 1. Type `git status` to make sure there is nothing to commit.
 1. Type `git push origin class-02` to push the class-02 branch changes to your forked repo on GitHub.
-1. On GitHub, add your navigator as a collaborator to you forked repo. 
+1. On GitHub, add your navigator as a collaborator to you forked repo.
 
 ## Switch roles
 
-1. Navigator: 
-1. `cd` into your main `301` directory. 
+1. Navigator:
+1. `cd` into your main `301` directory.
 1. `cd` into your `navigator` directory.
-1. `git clone` your-partner's-repo-url their-name-your-name 
+1. `git clone` your-partner's-repo-url their-name-your-name
 1. Since you are now a collaborator, you can `pull` and `push` changes to and from `orgin`.
 1. `cd` into this repo followed by `cd` into the corresponding `class-day/pair-assignment/starter-code` directory.
 1. The new driver now opens the code in Atom and has hands on the keyboard to work through the next one or two TODO items.
