@@ -56,12 +56,13 @@ articleView.handleCategoryFilter = function() {
 };
 
 articleView.handleMainNav = function() {
-  // TODO: Add a delegated event handler to .main-nav element below that will
-  //        power the Tabs feature.
+  // TODO: Complete the delegated event handler below to help
+  //         power the Tabs feature.
   //       Clicking any .tab element should:
   //        1. hide all the .tab-content sections.
   //        2. fade in the single .tab-content section that is associated with
-  //            the clicked .tab element.
+  //            the clicked .tab element's data-content attribute. This data
+  //            attribute should match the id of the section we want handle.
   //         You may need to dynamically build a selector string (concatenation???)
   //          with the correct ID, based on the data available to you on the .tab
   //          element that was clicked.
@@ -84,6 +85,8 @@ articleView.setTeasers = function() {
   //       Ideally, we should attach this as just 1 event handler
   //       on the #articles section, and let it process any .read-on clicks that
   //       happen.
+
+  // STRETCH GOAL!: change the read more link to read less
 };
 
 // TODO: Call all of the above functions, once we are sure the DOM is ready.
