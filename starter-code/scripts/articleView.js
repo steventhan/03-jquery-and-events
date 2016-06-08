@@ -74,7 +74,11 @@ articleView.setTeasers = function() {
   $hiddenBody.hide();
   $('article').on('click','.read-on', function(){
     $hiddenBody.toggle();
-    $(this).text('Show Less');
+    if (this.html === 'Read on &rarr;') {
+      $(this).html('Show less');
+    } else {
+      $(this).html('Read on &rarr;');
+    }
     return false;
   });
 
