@@ -70,7 +70,13 @@ articleView.handleMainNav = function() {
 articleView.setTeasers = function() {
   /* NOTE: this hides any elements after the first 2 (<p> tags in this case)
           in any article body */
-  $('.article-body *:nth-of-type(n+2)').hide();
+  var $hiddenBody = $('.article-body *:nth-of-type(n+3)');
+  $hiddenBody.hide();
+  $('article').on('click','.read-on', function(){
+    $hiddenBody.toggle();
+    $(this).text('Show Less');
+    return false;
+  });
 
   /* TODO: Add a delegated event handler to reveal the remaining body section.
           When a .read-on link is clicked, we can:
@@ -85,3 +91,4 @@ articleView.populateFilters();
 articleView.handleAuthorFilter();
 articleView.handleCategoryFilter();
 articleView.handleMainNav();
+articleView.setTeasers();
