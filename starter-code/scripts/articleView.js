@@ -39,6 +39,16 @@ articleView.handleCategoryFilter = function () {
   /*TODO: Just like we do for #author-filter above, we should handle changes
           events on the #category-filter element. Besure to reset the #author-filter
           while you're at it! */
+  $('#category-filter').on('change', function(){
+    if ($(this).val()) {
+      val = $(this).val();
+      $('article').hide();
+      $('article[data-category="' + val + '"]').fadeIn();
+    } else {
+      $('article').not('.template').show();
+    }
+    $('#author-filter').val('');
+  });
 };
 
 articleView.handleMainNav = function() {
@@ -69,3 +79,4 @@ articleView.setTeasers = function() {
 //TODO: Invoke all of the above functions (methods);
 articleView.populateFilters();
 articleView.handleAuthorFilter();
+articleView.handleCategoryFilter();
