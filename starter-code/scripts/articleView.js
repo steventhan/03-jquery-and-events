@@ -22,10 +22,13 @@ articleView.handleAuthorFilter = function() {
               1. Hide all the articles,
               2. Fade in only the articles that match based on the author that was selected
               (Hint: attribute selector??) */
+      $('article').hide();
+      $('article[data-author-name="' + val + '"]').fadeIn();
     } else {
       /* TODO: Otherwise, we should:
               1. Show all the articles,
               2. Except the one article we are using as template */
+      $('article').not('.template').show();
     }
     $('#category-filter').val('');
   });
