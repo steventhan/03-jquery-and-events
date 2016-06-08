@@ -9,7 +9,7 @@ articleView.populateFilters = function(){
 
     val = $(this).attr('data-category');
     optionTag = '<option value="' + val + '">' + val + '</option>';
-    if ($('#category-filter option[value]="' + val + '"').length === 0) {
+    if ($('#category-filter option[value="' + val + '"]').length === 0) {
       $('#category-filter').append(optionTag);
     }
   });
@@ -18,6 +18,7 @@ articleView.populateFilters = function(){
 articleView.handleAuthorFilter = function() {
   $('#author-filter').on('change', function(){
     if ($(this).val()) {
+      var val = $(this).val();
       /*TODO: If the select box changes to an option that has a value, we should:
               1. Hide all the articles,
               2. Fade in only the articles that match based on the author that was selected
@@ -66,3 +67,5 @@ articleView.setTeasers = function() {
 };
 
 //TODO: Invoke all of the above functions (methods);
+articleView.populateFilters();
+articleView.handleAuthorFilter();
