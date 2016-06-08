@@ -31,7 +31,20 @@
     </header>
     <main>
       <section id="articles" class="tab-content">
-        
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="author">
+                <option value="option">-- Filter by Authors --</option>
+              </select>
+            </li>
+            <li>
+              <select id="category-filter">
+                <option value="option">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
         <article class="template" data-category="cat">
           <header>
             <h1>Title</h1>
@@ -65,5 +78,8 @@
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
     <!-- TODO: Link up our new js file! -->
+    <script src="scripts/articleView.js">
+
+    </script>
   </body>
 </html>
