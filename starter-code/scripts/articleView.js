@@ -1,4 +1,18 @@
 // Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
+jQuery.fn.extend({
+  toggleText: function(a, b) {
+    var that = this;
+    if (that.text() !== a && that.text() !== b) {
+      that.html(a);
+    } else if (that.text() === a) {
+      that.html(b);
+    } else if (that.text() === b) {
+      that.html(a);
+    }
+    return that;
+  }
+});
+
 var articleView = {};
 
 articleView.populateFilters = function(){
@@ -74,11 +88,7 @@ articleView.setTeasers = function() {
   $hiddenBody.hide();
   $('article').on('click','.read-on', function(){
     $hiddenBody.toggle();
-    if (this.html === 'Read on &rarr;') {
-      $(this).html('Show less');
-    } else {
-      $(this).html('Read on &rarr;');
-    }
+    $(this).toggleText('Read on →', 'Show less');
     return false;
   });
 
