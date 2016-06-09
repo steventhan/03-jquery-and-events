@@ -73,10 +73,11 @@ articleView.setTeasers = function() {
   var $hiddenBody = $('.article-body *:nth-of-type(n+3)');
   $hiddenBody.hide();
   $('article').on('click','.read-on', function(){
-    $hiddenBody.toggle();
     if ($(this).html() === 'Read on →') {
+      $(this).prev().children().show();
       $(this).html('&larr; Show less');
     } else {
+      $(this).prev().children('*:nth-of-type(n+3)').hide();
       $(this).html('Read on &rarr;');
     }
     return false;
