@@ -1,15 +1,15 @@
 // Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
 jQuery.fn.extend({
   toggleText: function(a, b) {
-    var that = this;
-    if (that.text() !== a && that.text() !== b) {
-      that.html(a);
-    } else if (that.text() === a) {
-      that.html(b);
-    } else if (that.text() === b) {
-      that.html(a);
+    var self = this;
+    if (self.text() !== a && self.text() !== b) {
+      self.html(a);
+    } else if (self.text() === a) {
+      self.html(b);
+    } else if (self.text() === b) {
+      self.html(a);
     }
-    return that;
+    return self;
   }
 });
 
